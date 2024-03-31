@@ -1,15 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SimpleForm extends StatelessWidget{
+  const SimpleForm({super.key});
+
   @override
   Widget build(BuildContext context) {
+    //Button style
     ButtonStyle buttonStyle = ElevatedButton.styleFrom(
-      minimumSize: Size(double.infinity, 64),
-      shape: RoundedRectangleBorder(
+      minimumSize: const Size(double.infinity, 64),
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       )
     );
+
     return Scaffold(
        body: SafeArea(
          child: Padding(

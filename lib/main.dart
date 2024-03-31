@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutterwidget/resourcess/simple_textfeild_form.dart';
+import 'package:flutterwidget/resourcess/GridView_Gesture_dynamic.dart';
+// import 'package:flutterwidget/resourcess/listview_gesture_dynamic.dart';
+// import 'package:flutterwidget/resourcess/simple_textfeild_form.dart';
 
 void main(){
   runApp(const MainApp());
 }
-
-
 
 
 class MainApp extends StatelessWidget{
@@ -14,8 +14,8 @@ class MainApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FlutterWidget',
-      home: SimpleForm(),
+      debugShowCheckedModeBanner: false,
+      home:  GridViewGestureDynamic(),
     );
   }
-
 }
