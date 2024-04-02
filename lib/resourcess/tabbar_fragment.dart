@@ -1,16 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterwidget/fregment/fregment.dart';
 
 
 class TabBarFragmentView extends StatelessWidget{
+  const TabBarFragmentView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 8,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Tab Bar Fragment'),
-          bottom: TabBar(
+          title: const Text('Tab Bar Fragment'),
+          bottom: const TabBar(
             isScrollable: true,
             tabs: [
               Tab(icon: Icon(Icons.home), text: 'Home',),
@@ -24,16 +26,16 @@ class TabBarFragmentView extends StatelessWidget{
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
-            Text('1'),
-            Text('2'),
-            Text('3'),
-            Text('4'),
-            Text('5'),
-            Text('6'),
-            Text('7'),
-            Text('8')
+            CustomFregment(nameOfFregment: 'Home fregment'),
+            CustomFregment(nameOfFregment: 'Search fregment'),
+            CustomFregment(nameOfFregment: 'Settings fregment'),
+            CustomFregment(nameOfFregment: 'Email fregment'),
+            CustomFregment(nameOfFregment: 'Mail fregment'),
+            CustomFregment(nameOfFregment: 'Person fregment'),
+            CustomFregment(nameOfFregment: 'Alarm fregment'),
+            CustomFregment(nameOfFregment: 'Balance fregment'),
           ],
         ),
       ),

@@ -29,7 +29,7 @@ class ListViewDynamicGesture extends StatelessWidget{
                   customSnakBar(context, items[index]['title']);
             },
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               width: double.infinity,
               height: 300,
               child: Image.network(items[index]['img']!, fit: BoxFit.fill,),

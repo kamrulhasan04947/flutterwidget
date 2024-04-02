@@ -16,6 +16,8 @@ class GridViewGestureDynamic extends StatelessWidget{
     {'img': 'https://rabbil.com/files/mernS.png', 'title': 'Item Node.js'},
   ];
 
+  GridViewGestureDynamic({super.key});
+
   customSnakBar(context, msg){
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(msg)),
@@ -27,7 +29,7 @@ class GridViewGestureDynamic extends StatelessWidget{
     return Scaffold(
       body: GridView.builder(
           itemCount: items.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 1,
             childAspectRatio: 1.2,
@@ -39,7 +41,7 @@ class GridViewGestureDynamic extends StatelessWidget{
                 customSnakBar(context, items[index]['title']);
               },
               child: Container(
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 width: double.infinity,
                 height: 300,
                 child: Image.network(items[index]['img']!, fit: BoxFit.fill,),
