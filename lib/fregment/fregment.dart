@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class CustomFregment extends StatelessWidget{
   const CustomFregment({super.key, required this.nameOfFregment});
@@ -9,5 +9,4 @@ class CustomFregment extends StatelessWidget{
       child:  Text(nameOfFregment),
     );
   }
-
 }

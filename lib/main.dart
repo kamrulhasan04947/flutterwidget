@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterwidget/pages/homepage.dart';
 import 'package:flutterwidget/resourcess/center_column_text_Image.dart';
 import 'package:flutterwidget/resourcess/tabbar_fragment.dart';
 // import 'package:flutterwidget/resourcess/GridView_Gesture_dynamic.dart';
@@ -18,7 +19,7 @@ class MainApp extends StatelessWidget{
     return const MaterialApp(
       title: 'FlutterWidget',
       debugShowCheckedModeBanner: false,
-      home:  TabBarFragmentView(),
+      home: HomePage(),
     );
   }
 }
