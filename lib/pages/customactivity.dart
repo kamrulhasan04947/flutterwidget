@@ -5,7 +5,8 @@ import 'package:flutterwidget/pages/homepage.dart';
 
 class CustomActivity extends StatelessWidget {
   final String activityName;
-  const  CustomActivity ({super.key , required this.activityName});
+  final String goToActivity;
+  const  CustomActivity ({super.key , required this.activityName, required this.goToActivity});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class CustomActivity extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> const CustomActivity(activityName: 'Activity2')));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> const CustomActivity(activityName: 'Activity2', goToActivity: 'Activity1',)));
             },
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.cyan,
@@ -49,7 +50,7 @@ class CustomActivity extends StatelessWidget {
                 )
             ),
             child: Text(
-              'goto Activity2',
+              'goto $goToActivity',
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),

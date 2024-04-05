@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context)=> const CustomActivity(activityName: 'Activity1',)),
+                      MaterialPageRoute(builder: (context)=> const ActivityOne()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
             onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context)=> const CustomActivity(activityName: 'Activity2')),
+                MaterialPageRoute(builder: (context)=> const ActivityTwo()),
               );
             },
             style: ElevatedButton.styleFrom(
